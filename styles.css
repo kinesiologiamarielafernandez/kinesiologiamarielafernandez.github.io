@@ -178,3 +178,15 @@ section.container.pt-3.pb-4 {
         opacity: 1;
     }
 }
+
+/* Unificar forma de todos los botones */
+.btn-custom,
+.btn-outline-custom,
+.navbar .btn {
+    padding: 0.5rem 1.2rem;
+    font-weight: 600;
+    border-radius: 10px; /* Bordes redondeados como el botón "Agendar Turno" */
+    font-size: 1rem;
+    min-width: 160px; /* Tamaño similar entre todos */
+    text-align: center;
+}
