@@ -1,0 +1,180 @@
+/* Colores más limpios y suaves para un ambiente de consultorio */
+:root {
+    --main-color: #A7D8D4; /* Verde agua suave */
+    --accent-color: #6B8E8B; /* Gris verdoso para detalles */
+    --light-bg-color: #F8F8F8; /* Fondo muy claro */
+    --text-color: #333; /* Texto oscuro para buena legibilidad */
+    --border-color: #E0E0E0; /* Borde suave */
+    --button-text-color: #2C3E50; /* Color de texto más oscuro para los botones */
+    --card-title-color: #4A6E6B; /* Color más elegante para los títulos de las tarjetas */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: #fff; /* Fondo blanco */
+    animation: fadeIn 1s ease-in-out; /* Animación para el cuerpo */
+}
+
+.bg-lightgreen {
+    background-color: var(--main-color) !important; /* Verde agua suave */
+}
+
+.text-custom {
+    color: var(--text-color);
+}
+
+.border-custom {
+    border: 1px solid var(--border-color) !important;
+}
+
+.btn-custom {
+    background-color: var(--main-color);
+    color: var(--button-text-color); /* Color de texto ajustado para los botones */
+    border: none;
+    transition: background-color 0.3s, transform 0.2s ease-in-out; /* Transición más suave */
+}
+
+.btn-custom:hover {
+    background-color: #8FCDC9; /* Tono más claro al pasar el mouse */
+    color: var(--button-text-color); /* Mantener color de texto legible al pasar el mouse */
+    transform: scale(1.05); /* Pequeña animación de aumento */
+}
+
+.btn-outline-custom {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s ease-in-out;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.card {
+    margin-top: 0px;
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards; /* Animación para las tarjetas */
+}
+
+.card h5 {
+    color: var(--card-title-color); /* Color ajustado para los títulos de las tarjetas */
+}
+
+.card p {
+    color: var(--text-color);
+}
+
+/* Quitar borde de la imagen del logo */
+img {
+    clip-path: inset(2% 2% 2% 2%); /* Recorta un 2% de todos los bordes */
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    animation: slideIn 0.5s ease-out; /* Animación de entrada para el botón */
+}
+
+.whatsapp-float img {
+    width: 75px;
+}
+
+.navbar .btn {
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.navbar .btn:hover {
+    transform: scale(1.05);
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #2C3E50;
+}
+
+.map-responsive {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px; /* opcional para bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* opcional */
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Reducción de margen entre secciones */
+section {
+    margin-bottom: 0; /* Elimina margen extra en la parte inferior */
+}
+
+/* Tarjetas informativas */
+.container.my-2 {
+    margin-top: 0 !important; /* Elimina el margen superior innecesario */
+    margin-bottom: 0 !important; /* Elimina margen inferior innecesario */
+}
+
+/* Establecer el margen de la sección principal a 0 */
+section.container.pt-3.pb-4 {
+    margin-bottom: 0;
+}
+
+/* Espacio entre la sección de tarjetas y la de ubicación */
+#ubicacion {
+    margin-top: 30px; /* Ajusta el valor según el espacio que desees */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        right: -100px;
+        opacity: 0;
+    }
+    100% {
+        right: 20px;
+        opacity: 1;
+    }
+}
